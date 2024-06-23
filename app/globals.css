@@ -2,32 +2,138 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    /* Headings */
+    --heading-1: 9.375rem;
+    --heading-2: 6.25rem;
+    --heading-3: 3.5rem;
+    --heading-4: 2rem;
+    --heading-5: 1.75rem;
+
+    --sub-heading-1: 1.75rem;
+    --sub-heading-2: 0.875rem;
+
+    --body: 1.125rem;
+    --body-line-height: 2rem;
+
+    --nav-text: 1rem;
+
+    /* Letter Spacing */
+    --header-letter-spacing: 0.29531rem;
+    --sub-header-letter-spacing: 0.14763rem;
+    --nav-letter-spacing: 0.16875rem;
+
+    /* Color System */
+    --dark-blue: #0B0D17;
+    --light-blue: #D0D6F9;
+    --white: #FFFFFF;
+
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+
+/* Glass effect for drawer and tablet menu */
+.drawer, .wide-screen-menu {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.774227142333984px);
+}
+
+
+/* Homepage background  */
+/* Mobile view  */
+.homepage{
+  background: url("../public/assets/home/background-home-mobile.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Tablet view  */
+@media (min-width: 48rem) {
+  .homepage{
+    background: url("../public/assets/home/background-home-tablet.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+/* Desktop view  */
+@media (min-width: 90rem) {
+  .homepage{
+    background: url("../public/assets/home/background-home-desktop.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+/* 
+
+  media query for background responsiveness 
+  when a certain "VIEW HEIGHT" is reach
+
+*/
+
+/* 
+  
+  with a max-height of 713px and max-width of 767px in mobile view
+  contents tend to overflow in y-axis thus making the background cut from
+  overflowing contents. 
+
+*/
+@media (max-height: 44.5625rem) and (max-width: 47.9375rem) {
+ 
+  main {
+
+    /* 
+      once the viewport is meet then fix the container to a static height of 713px
+      allowing the background size adjust accordingly and make it look intact when
+      viewing with smaller devices.
+
+    */
+    width: 100% !important;
+    height: 44.5625rem !important;
+  }
+}
+
+/* Same concept with mobile but for tablet view */
+@media (max-height: 64rem) and ((min-width: 48rem) and (max-width: 89.9375rem)) {
+  main {
+    width: 100% !important;
+    height: 64rem !important;
+  }
+}
+
+
+/* 
+
+  for desktop view with max-height of 899px and min-width of 769px
+  prevent the responsive behaviour of flexbox and make in place 
+  the contents of the homepage when viewed in smaller devices
+
+*/
+@media (max-height: 56.1875rem) and (min-width: 48.0625rem) {
+  main {
+    width: 100% !important;
+    height: 56.1875rem !important;
+  }
+}
+/* 
+
+  media query for background responsiveness 
+  when a certain "VIEW HEIGHT" is reach
+
+*/
+
+/* IPhone 5/SE homepage paragraph fix */
+@media (min-width: 18.75rem) and (max-width: 23.375rem){
+  .home-body-content{
+    width: 17.5rem;
   }
 }
