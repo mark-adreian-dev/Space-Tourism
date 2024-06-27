@@ -36,6 +36,7 @@ const config: Config = {
   
       colors: {
         "dark-blue": "var(--dark-blue)",
+        "blue": "var(--blue)",
         "light-blue": "var(--light-blue)",
         "white": "var(--white)",
       },

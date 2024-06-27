@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Bellefair, Barlow_Condensed, Barlow} from "next/font/google";
 import "./globals.css";
+import "./css/hompage.css"
+import "./css/destination.css"
 
 
 

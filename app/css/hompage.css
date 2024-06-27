@@ -1,0 +1,67 @@
+
+/* 
+
+  media query for background responsiveness 
+  when a certain "VIEW HEIGHT" is reach
+
+*/
+
+/* 
+  
+  with a max-height of 713px and max-width of 767px in mobile view
+  contents tend to overflow in y-axis thus making the background cut from
+  overflowing contents. 
+
+*/
+@media (max-height: 44.5625rem) and (max-width: 47.9375rem) {
+ 
+    .homepage{
+  
+      /* 
+        once the viewport is meet then fix the container to a static height of 713px
+        allowing the background size adjust accordingly and make it look intact when
+        viewing with smaller devices.
+  
+      */
+      width: 100% !important;
+      height: 44.5625rem !important;
+    }
+  }
+  
+  /* Same concept with mobile but for tablet view */
+  @media (max-height: 64rem) and ((min-width: 48rem) and (max-width: 89.9375rem)) {
+    .homepage {
+      width: 100% !important;
+      height: 64rem !important;
+    }
+  }
+  
+  
+  /* 
+  
+    for desktop view with max-height of 899px and min-width of 769px
+    prevent the responsive behaviour of flexbox and make in place 
+    the contents of the homepage when viewed in smaller devices
+  
+  */
+  @media (max-height: 56.1875rem) and (min-width: 48.0625rem) {
+    .homepage {
+      width: 100% !important;
+      height: 56.1875rem !important;
+    }
+  }
+  /* 
+  
+    media query for background responsiveness 
+    when a certain "VIEW HEIGHT" is reach
+  
+  */
+  
+  /* IPhone 5/SE homepage paragraph fix */
+  @media (min-width: 18.75rem) and (max-width: 23.375rem){
+    .home-body-content{
+      width: 17.5rem;
+    }
+  }
+
+  
