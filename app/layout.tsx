@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Bellefair, Barlow_Condensed, Barlow} from "next/font/google";
 import "./globals.css";
-import "./css/hompage.css"
-import "./css/destination.css"
+import "./CSSModules/hompage.css"
+import "./CSSModules/destination.css"
 
 
 
@@ -33,7 +33,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en">
-      <body className={`${bellefair.variable} ${barlowCondensed.variable} ${barlow.variable}`}>{children}</body>
+      <body className={`${bellefair.variable} ${barlowCondensed.variable} ${barlow.variable}`}>
+        {children}
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+      </body>
     </html>
   );
 }

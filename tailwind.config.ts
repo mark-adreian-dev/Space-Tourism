@@ -2,6 +2,8 @@ import { Bellefair } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+ 
+  
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -50,12 +52,7 @@ const config: Config = {
     }
   },
 
-  plugins: [require('daisyui')],
-
-  daisyui: {
-    darkTheme: "dark",
-    base: false
-    
-  }
+  plugins: [],
+  
 };
 export default config;

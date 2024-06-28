@@ -71,8 +71,8 @@ const header = ({ active }:any ) => {
                   menu.map(item => 
                     <li key={item.number} className={`relative h-full ${item.number === 3 ? null : 'tablet:mr-10'}`} onMouseEnter={() => handleMouseEnter(item.number)} onMouseLeave={handleMouseLeave}>
                       <Link href={item.title === "Home" ? "/" : `/${item.title}`} className='flex items-center h-full'>
-                        <p className='font-barlow-condensed text-nav font-bold mr-3 hidden desktop:block'>0{item.number}</p>
-                        <p className='font-barlow-condensed text-nav uppercase font-thin'>{item.title}</p>
+                        <p className='text-white font-barlow-condensed text-nav font-bold mr-3 hidden desktop:block'>0{item.number}</p>
+                        <p className='text-white font-barlow-condensed text-nav uppercase font-thin'>{item.title}</p>
                       </Link>
                       <div className={`indicator absolute left-0 bottom-0 w-full h-1 bg-white ${active == item.title ? 'opacity-100' : 'opacity-0'} ${hovered === item.number && active !== item.title ? 'opacity-50' : ''}`}></div> 
                     </li>

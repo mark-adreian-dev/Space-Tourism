@@ -63,6 +63,12 @@
   background-size: cover;
 }
 
+.crew {
+  background: url('../public/assets/crew/background-crew-mobile.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 /* Tablet view  */
 @media (min-width: 48rem) {
   .homepage{
@@ -73,6 +79,12 @@
 
   .destination{
     background: url("../public/assets/destination/background-destination-tablet.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .crew {
+    background: url('../public/assets/crew/background-crew-tablet.jpg') no-repeat;
     background-position: center;
     background-size: cover;
   }
@@ -88,6 +100,12 @@
 
   .destination{
     background: url("../public/assets/destination/background-destination-desktop.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .crew {
+    background: url('../public/assets/crew/background-crew-desktop.jpg') no-repeat;
     background-position: center;
     background-size: cover;
   }
