@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Bellefair, Barlow_Condensed, Barlow} from "next/font/google";
+
+import "swiper/css";
 import "./globals.css";
-import "./CSSModules/hompage.css"
-import "./CSSModules/destination.css"
+import "./CSSModules/backgroundMediaQuery.css"
 
 
 
@@ -33,8 +34,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en">
-      <body className={`${bellefair.variable} ${barlowCondensed.variable} ${barlow.variable}`}>
-        {children}
+      <body className={`${bellefair.variable} ${barlowCondensed.variable} ${barlow.variable} bg-dark-blue`}>
+        <main className="bg-dark-blue">
+          {children}
+        </main>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
       </body>
     </html>

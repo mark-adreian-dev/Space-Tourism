@@ -89,8 +89,8 @@ const header = ({ active }:any ) => {
               menu.map(item => 
                 <li key={item.number} className='relative w-full mb-6'>
                   <Link href={item.title === "Home" ? "/" : `/${item.title}`} className='flex items-center py-2 pl-8'>
-                    <p className='font-barlow-condensed text-nav font-bold mr-3'>0{item.number}</p>
-                    <p className='font-barlow-condensed text-nav uppercase font-thin'>{item.title}</p>
+                    <p className='text-white font-barlow-condensed text-nav font-bold mr-3'>0{item.number}</p>
+                    <p className='text-white font-barlow-condensed text-nav uppercase font-thin'>{item.title}</p>
                   </Link>
                   {active === item.title ? <div className='indicator absolute top-0 right-0 w-1 h-8 bg-white'></div> : null}
                 </li>

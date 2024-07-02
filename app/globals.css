@@ -30,7 +30,6 @@
     --blue: #383B4B;
     --light-blue: #D0D6F9;
     --white: #FFFFFF;
-    
 
   }
 }
@@ -67,6 +66,7 @@
   background: url('../public/assets/crew/background-crew-mobile.jpg') no-repeat;
   background-position: center;
   background-size: cover;
+
 }
 
 /* Tablet view  */
@@ -87,6 +87,8 @@
     background: url('../public/assets/crew/background-crew-tablet.jpg') no-repeat;
     background-position: center;
     background-size: cover;
+
+    
   }
 }
 
