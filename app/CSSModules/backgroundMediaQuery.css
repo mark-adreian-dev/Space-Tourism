@@ -16,18 +16,18 @@
 */
 @media (max-height: 44.5625rem) and (max-width: 47.9375rem) {
  
-    .homepage{
-  
-      /* 
-        once the viewport is meet then fix the container to a static height of 713px
-        allowing the background size adjust accordingly and make it look intact when
-        viewing with smaller devices.
-  
-      */
-      width: 100% !important;
-      height: 44.5625rem !important;
-    }
+  .homepage{
+
+    /* 
+      once the viewport is meet then fix the container to a static height of 713px
+      allowing the background size adjust accordingly and make it look intact when
+      viewing with smaller devices.
+
+    */
+    width: 100% !important;
+    height: 44.5625rem !important;
   }
+}
   
   /* Same concept with mobile but for tablet view */
   @media (max-height: 64rem) and ((min-width: 48rem) and (max-width: 89.9375rem)) {
@@ -95,13 +95,28 @@
 
 */
 
-/* Crew page backgroundfix for mobile view */
+/* Crew and Technology page backgroundfix for mobile view */
 @media (max-width: 47.9375rem) and (max-height: 44.375rem){
-    .crew {
+    .crew, .technology{
         width: 100% !important;
         height: 44.375rem !important;
     }
 }
+
+/* Crew page backgroundfix for desktop view */
+@media (max-height: 56.25rem) and (width: 90rem){
+  .crew-main-content{
+    overflow-y: hidden;
+  }
+}
+
+@media (min-height: 67.5rem) and (min-width: 120rem){
+  .crew-main-content{
+    overflow-y: hidden;
+  }
+}
+
+
 
 
 
@@ -109,7 +124,7 @@
 /* fix for tablet view */
 /* max-width of 1439px and max-height of 1024px */
 @media ((min-width: 48rem) and (max-width: 89.9375rem)) and (max-height: 64rem){
-    .destination, .crew {
+    .destination, .crew, .technology {
         width: 100% !important;
         height: 64rem !important;
         
@@ -120,12 +135,11 @@
 /* fix for desktop view */
 /* min-width of 1440px and max-height of 900px */
 @media (min-width: 90rem) and (max-height: 56.25rem){
-    .destination, .crew {
+    .destination, .crew, .technology {
         width: 100% !important;
         height: 56.25rem !important;
        
     }
 }
-
 
 /************************ Destination, Crew ************************/

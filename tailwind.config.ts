@@ -47,7 +47,7 @@ const config: Config = {
         'mobile': '23.4375rem',
         'tablet': '48rem',
         'desktop': '90rem',
-        'wide': '120rem'
+        'wide': '90.0625rem'
       }
     }
   },
