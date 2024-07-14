@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 
 const ExploreButton = () => {
-  const [hovered, setHovered] = useState(false)
+  const [hovered, setHovered] = useState<boolean>(false)
 
   const handleMouseEnter = () => setHovered(true)
   const handleMouseLeave = () => setHovered(false)

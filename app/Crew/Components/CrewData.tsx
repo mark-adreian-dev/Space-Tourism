@@ -1,12 +1,16 @@
 import React from 'react'
 
-interface ChildProps {
-    crewMemberData: any,
+interface CrewMemeberDataType {
+  role: string,
+  name: string,
+  bio: string
 }
 
-const CrewData:React.FC<ChildProps> = ({ crewMemberData }) => {
+interface Props {
+  crewMemberData: CrewMemeberDataType,
+}
 
-    const crewMemeberName = crewMemberData.name
+const CrewData:React.FC<Props> = ({ crewMemberData }) => {
 
   const bodyWidth = {
     "Douglas Hurley": "tablet:w-[28.625rem]",
@@ -14,6 +18,7 @@ const CrewData:React.FC<ChildProps> = ({ crewMemberData }) => {
     "Victor Glover": "tablet:w-[37rem]",
     "Anousheh Ansari": "tablet:w-[33.5rem]"
   } 
+
   return (
     <div className='crew-data text-center tablet:mb-10 desktop:text-start desktop:mb-28'>
         <h5 className='text-base font-bellefair text-white uppercase opacity-50 mb-2 tablet:text-2xl desktop:text-h4 desktop:mb-4'>{crewMemberData.role}</h5>

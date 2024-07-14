@@ -8,7 +8,6 @@ interface ChildProps {
     handleClick: (techName:string) => void
 }
 
-
 const Paginations:React.FC<ChildProps> = ({ activeTech, handleClick }) => {
   return (
     <div className='tech-pagination flex mb-6 tablet:mb-11 desktop:flex-col desktop:mr-20 desktop:mb-0'>

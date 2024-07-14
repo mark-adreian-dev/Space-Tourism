@@ -1,12 +1,21 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
- import Link from 'next/link'
-
+import Link from 'next/link'
 import logo from '../../public/assets/shared/logo.svg'
 
-const menu = [
+interface Props {
+  active: string
+}
+
+interface MenuType {
+  title: string,
+  number: number
+}
+
+
+const menu: MenuType[] = [
 
   {
     'title': "Home",
@@ -30,9 +39,10 @@ const menu = [
  
 ]
 
-const header = ({ active }:any ) => {
-  const [menuActive, setMenuActive] = useState(false)
-  const [hovered, setHovered] = useState<Number | null>(null)
+
+const header:React.FC<Props> = ({ active }) => {
+  const [menuActive, setMenuActive] = useState<boolean>(false)
+  const [hovered, setHovered] = useState<number | null>(null)
 
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -45,7 +55,7 @@ const header = ({ active }:any ) => {
     else setMenuActive(true)
   }
 
-  const handleMouseEnter = (number:Number) => setHovered(number)
+  const handleMouseEnter = (number: number) => setHovered(number)
   const handleMouseLeave = () => setHovered(null)
   
   return (
