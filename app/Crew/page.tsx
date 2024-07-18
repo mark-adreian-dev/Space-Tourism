@@ -22,8 +22,8 @@ const page = () => {
   return (
     <>
       <div className='crew opacity-25 absolute w-screen h-screen'></div>
-      <div className="w-screen h-screen relative crew-main-content">
-        <Header active="Crew" />
+      <div className="crew w-screen h-screen relative crew-main-content">
+        <Header active="Crew"/>
         <div className='flex flex-col justify-center items-center tablet:mt-10 desktop:mt-[4.75rem]'>
           <div className='flex justify-center items-center flex-col tablet:w-full desktop:w-fit'>
             <IntroText number={2} description={"Meet you crew"}/>

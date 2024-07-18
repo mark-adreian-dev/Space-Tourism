@@ -44,8 +44,8 @@ const Destination = () => {
 
   return (
     <>
-      <div className='destination opacity-50 absolute w-screen h-screen'></div>
-      <div className="w-screen h-screen relative">
+      <div className='absolute destination opacity-50 w-screen h-screen'></div>   
+      <div className="destination w-screen h-screen relative">    
         <Header active="Destination" />
         <div className='destination-main-content flex flex-col justify-center items-center tablet:mt-10 desktop:mt-20'>
           <div className='flex flex-col justify-center items-center tablet:w-full desktop:w-fit desktop:block'> 

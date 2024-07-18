@@ -39,12 +39,13 @@ const page = () => {
   const handleClick = (techName: string) => {
     setActiveTech(techName)
     technologyRef.current.slideTo(TechnologyIndex[techName as keyof typeof TechnologyIndex])
+
   }
 
   return (
     <>
       <div className="technology opacity-25 absolute w-screen h-screen mix-blend-screen"></div>
-      <div className="w-screen h-screen relative">
+      <div className="technology w-screen h-screen relative">
         <Header active="Technology" />
         <div className="destination-main-content flex flex-col justify-center items-center tablet:mt-10 desktop:mt-20 desktop:items-end wide:items-center">
           <div className="flex flex-col justify-center items-center tablet:w-full desktop:block desktop:w-[79.59375rem]">
